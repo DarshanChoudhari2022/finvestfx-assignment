@@ -27,7 +27,7 @@ const Table = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/items");
+      const response = await fetch("https://finvest-server.vercel.app/api/items");
       const data = await response.json();
       setTableData(data);
       setIsLoading(false);
@@ -66,7 +66,7 @@ const Table = () => {
   const saveChanges = async () => {
     try {
       setIsSaving(true);
-      const response = await fetch("http://localhost:3000/api/items", {
+      const response = await fetch("https://finvest-server.vercel.app/api/items", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
